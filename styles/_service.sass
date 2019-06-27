@@ -1,0 +1,71 @@
+// SERVICES BLOCK#2
+.content_service
+	margin: auto
+	display: flex
+	flex-direction: column
+	justify-content: space-around
+	align-items: center
+
+.second_title-service
+	margin-top: rem(150px)
+	margin-bottom: rem(50px)
+	text-align: center
+	color: #394b50
+
+.service_title
+	font-family: Raleway
+	font-weight: 900
+	font-size: 35px
+	text-transform: uppercase
+	margin-bottom: 5px
+
+.service_title_desc
+	font-family: Open sans
+
+.service_list
+	list-style: none
+	margin: 0
+	padding: 0
+	display: flex
+	flex-wrap: wrap
+	justify-content: center
+	align-items: center
+	margin-bottom: 90px
+
+.service_item
+	width: rem(450px)
+	padding-left: rem(70px)
+	margin-left: rem(80px)
+	position: relative
+	&:before
+		align-self: center
+		content: ''
+		position: absolute
+		top: 40%
+		right: 90%
+		transform: translate(0,-50%)
+		width: 60px
+		height: 60px
+
+.service_item_title
+	text-transform: uppercase
+	color: #394b50
+	font-family: lato
+	font-weight: 700
+
+.service_desc
+	color: #7b7b7b
+	font-family: "Open Sans"
+	font-size: 13px
+	font-weight: 400
+	line-height: 22px
+	margin-top: -5px
+
+$services: clock, edu, peace, settings, rocket, money
+@each $service in $services
+	.service_item-#{$service}
+		&:before
+			background: url(../img/#{$service}.svg) no-repeat 
+			background-size: contain
+
+

@@ -1,0 +1,97 @@
+.how_block
+	display: flex
+	flex-direction: column
+	justify-content: center
+	text-align: center
+
+
+.how_list
+	display: flex
+	flex-direction: row
+	list-style: none
+	justify-content: center
+	margin-top: 120px
+
+.how_item
+	width: 250px
+	margin-right: 50px
+	margin-bottom: 70px
+	position: relative
+
+.how_item:nth-child(odd)
+	&:before
+		content: ''
+		position: absolute
+		top: -30px
+		left: 210px
+		width: 130px
+		height: 40px
+		background: url(../img/rows.png) no-repeat center center
+	
+.how_item:nth-child(2)
+	&:before
+		content: ''
+		position: absolute
+		bottom: 120px
+		left: 210px
+		width: 130px
+		height: 40px
+		background: url(../img/rows.png) no-repeat center center
+		transform: rotate(180deg)
+
+.how_item
+	width: 250px
+	margin-right: 50px
+	margin-bottom: 70px
+	
+
+.second_title-how
+	color: #394b50
+	
+.steps_img
+	width: 80px
+	height: 80px
+
+.how_title
+	font-size: 35px
+	font-weight: 900
+	text-transform: uppercase
+	margin-top: 130px
+	margin-bottom: 5px
+
+.how_title_desc
+	font-size: 18px
+	font-family: Lato
+	font-weight: 300
+
+.steps_title
+	color: #394b50
+	font-family: Lato
+	font-weight: 700
+	font-size: 20px
+	text-transform: uppercase
+
+.steps_desc
+	color: #7b7b7b
+	font-family: "Open Sans"
+	font-size: 13px
+	font-weight: 400
+	line-height: 22px
+
+.how_button
+	margin-bottom: 100px
+
+.how_link
+	padding: 15px 25px
+	border: 1px solid #ffbb42
+	border-radius: 4px
+	background: #ffbb42
+	color: #fff
+	border-radius: 3px
+	text-decoration: none
+	text-transform: uppercase
+	font-family: Lato
+	font-size: 14px
+	font-weight: 400
+	&:hover
+		background: #FF9B42

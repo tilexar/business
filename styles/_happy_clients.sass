@@ -1,0 +1,87 @@
+.clients_block
+	background: #ffc155
+	display: flex
+	flex-direction: column
+	justify-content: space-around
+	align-items: center
+	text-align: center
+
+.clients_title
+	font-family: Raleway
+	font-size: 35px
+	font-weight: 900
+	text-transform: uppercase
+	color: #fff
+	margin-top: 130px
+	margin-bottom: 5px
+
+.clients_title_desc
+	color: #fff
+	font-size: 16px
+	font-weight: 400
+	font-family: "Open Sans"
+
+.clients_list
+	list-style: none
+	display: flex
+	flex-direction: row
+	text-align: left
+	flex-wrap: wrap
+	justify-content: center
+	margin-bottom: 130px
+
+.clients_item
+	width: rem(380px)
+	height: 190px
+	padding-left: rem(150px)
+	margin-left: rem(30px)
+	margin-top: 20px
+	position: relative
+	background: #fff
+	border-radius: 4px
+	&:before
+		align-self: center
+		content: ''
+		position: absolute
+		top: 50%
+		right: 73%
+		transform: translate(0,-50%)
+		width: 120px
+		height: 120px
+
+.clients_text
+	color: #7b7b7b
+	font-family: "Open Sans"
+	font-size: 13px
+	font-weight: 400
+	line-height: 22px
+	width: 320px
+	margin-left: 20px
+	margin-top: 20px
+
+.name-position
+	margin-left: 20px
+	font-family: Lato;
+	font-size: 14px
+	font-weight: 400
+	line-height: 22px
+	text-transform: uppercase
+
+.name
+	color: #f6772c
+
+.position
+	color: #99a9ae
+
+.quotes
+	font-family: times
+	font-size: 23px
+	font-weight: 900
+	margin-left: -6px
+
+$users: natasha, sergei, dima, alesha
+@each $user in $users
+	.clients_item-#{$user}
+		&:before
+			background: url(../img/#{$user}.png) no-repeat
+			background-size: contain
